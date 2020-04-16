@@ -14,7 +14,7 @@ public class BasicCheckMap  extends Thread{
             Concurrency result = SingletonRepo.getInstance().get(key);
             if( result != null )
                 if( Util.getRandomDate() == result.getDate() )
-                    SingletonRepo.getInstance().delKey(key); 
+                    SingletonRepo.getInstance().clearHashMap(); 
             long sleep = (long) (Math.random() * 0); 
        
             Thread.sleep(sleep); 
