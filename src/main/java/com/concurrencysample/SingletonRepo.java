@@ -24,7 +24,7 @@ import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
 public class SingletonRepo {
     private static String ACCESS_KEY = "";
     private static String SECERET_KEY = "";
-    private ConcurrentHashMap<Integer, Concurrency> map = new ConcurrentHashMap<>();
+    private HashMap<Integer, Concurrency> map = new HashMap<>();
     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     private static SingletonRepo singletonrepo = null;
     static AWSCredentials ac;
@@ -70,7 +70,7 @@ public class SingletonRepo {
     }
     public synchronized void clearHashMap() {
         map.clear();
-        map = new ConcurrentHashMap<>();
+        map = new HashMap<>();
     }
     public Concurrency getKey(int product_number) {
         return map.get(product_number);  
