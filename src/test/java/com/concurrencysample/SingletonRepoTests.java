@@ -75,7 +75,7 @@ public class SingletonRepoTests {
 
 
     @DisplayName("HashMap repeatedTest")
-    @RepeatedTest(value = 500, name = "{displayName} - repetition {currentRepetition} of {totalRepetitions}")
+    @RepeatedTest(value = 1000, name = "{displayName} - repetition {currentRepetition} of {totalRepetitions}")
     public void SingletonRepoTestsThreadConcurrencyTest() throws Exception {
         int thrad_count = 8;
         int make_count =0 ;
