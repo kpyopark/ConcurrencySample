@@ -16,7 +16,7 @@ public class BasicCheckMap  extends Thread{
                 if( Util.getRandomDate() == result.getDate() )
                     SingletonRepo.getInstance().clearHashMap(); 
             long sleep = (long) (Math.random() * 0); 
-            if( SingletonRepo.getInstance().getMapCount() > 1000000){
+            if( SingletonRepo.getInstance().getMapCount() > 50000000){
                 SingletonRepo.getInstance().clearHashMap();
             }
             Thread.sleep(sleep); 
