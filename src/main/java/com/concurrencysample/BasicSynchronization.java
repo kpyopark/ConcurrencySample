@@ -11,7 +11,7 @@ public class BasicSynchronization extends Thread{
     }
     private void callMe() {
         try { 
-            int key = loop_count > 0 ? (int) (Math.random() * loop_count) : (int) (Math.random() * 1000000000);
+            int key = loop_count > 0 ? (int) (Math.random() * loop_count) : (int) (Math.random() * 100000000);
 //            int key = (int) (Math.random() * 1000);
             Concurrency result = SingletonRepo.getInstance().putKey(key);
             if( result == null)

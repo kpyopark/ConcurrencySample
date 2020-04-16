@@ -70,7 +70,7 @@ public class SingletonRepo {
     }
     public synchronized void clearHashMap() {
         map.clear();
-        map = new HashMap<>();
+        System.out.println("ClearMap!");
     }
     public Concurrency getKey(int product_number) {
         return map.get(product_number);  
