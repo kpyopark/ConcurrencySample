@@ -1,3 +1,3 @@
 
 sudo ./gradlew --stop
-nohup ./gradlew run 2>&1 &
+nohup ./gradlew run > app.log 2>&1 &
