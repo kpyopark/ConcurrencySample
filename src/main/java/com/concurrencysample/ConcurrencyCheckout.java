@@ -24,9 +24,9 @@ public class ConcurrencyCheckout {
         System.out.println("Start Concurrency Make Erro Test");
         System.out.println("================================\n");
 
-        BasicSynchronization[] basicsynchronizationThreadList = new BasicSynchronization[thrad_count];
+        BasicSynchronization[] basicsynchronizationThreadList = new BasicSynchronization[8];
 
-        for (int i = 0; i < thrad_count; i++) {
+        for (int i = 0; i < 8; i++) {
             basicsynchronizationThreadList[i] = new BasicSynchronization(0);
             basicsynchronizationThreadList[i].start();
         }
