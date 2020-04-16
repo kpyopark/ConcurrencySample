@@ -28,7 +28,7 @@ public class Concurrency {
 				today = r.toString();
 			}
 		} catch (ParseException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		}
 	}
 	
