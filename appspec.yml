@@ -4,7 +4,6 @@ files:
   - source: /
     destination: /home/ec2-user/express-service/
 hooks:
-  ApplicationStop:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
