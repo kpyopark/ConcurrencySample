@@ -10,13 +10,13 @@ public class BasicCheckMap  extends Thread{
     }
     private void getMe() {
         try { 
-            int key = (int) (Math.random() * 50000);
+            int key = (int) (Math.random() * 500000);
             Concurrency result = SingletonRepo.getInstance().get(key);
             if( result != null )
                 if( Util.getRandomDate() == result.getDate() )
                     SingletonRepo.getInstance().clearHashMap(); 
             long sleep = (long) (Math.random() * 0); 
-            if( SingletonRepo.getInstance().getMapCount() > 50000000){
+            if( SingletonRepo.getInstance().getMapCount() > 100000){
                 SingletonRepo.getInstance().clearHashMap();
             }
             Thread.sleep(sleep); 
