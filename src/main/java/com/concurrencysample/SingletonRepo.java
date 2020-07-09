@@ -3,28 +3,18 @@ package com.concurrencysample;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.concurrent.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.amazonaws.services.dynamodbv2.document.DynamoDB;
-import com.amazonaws.services.dynamodbv2.document.Item;
-import com.amazonaws.services.dynamodbv2.document.Table;
-import com.amazonaws.services.dynamodbv2.model.AttributeDefinition;
-import com.amazonaws.services.dynamodbv2.model.CreateTableRequest;
-import com.amazonaws.services.dynamodbv2.model.KeySchemaElement;
-import com.amazonaws.services.dynamodbv2.model.KeyType;
-import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
-import com.amazonaws.services.dynamodbv2.model.ScalarAttributeType;
 
 public class SingletonRepo {
     private static String ACCESS_KEY = "";
     private static String SECERET_KEY = "";
-    private HashMap<Integer, Concurrency> map = new HashMap<>();
+    private ConcurrentHashMap<Integer, Concurrency> map = new ConcurrentHashMap<>();
     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     private static SingletonRepo singletonrepo = null;
     static AWSCredentials ac;
