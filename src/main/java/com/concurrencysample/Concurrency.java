@@ -1,11 +1,11 @@
 package com.concurrencysample;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Concurrency {
     private final long id;
@@ -45,6 +45,10 @@ public class Concurrency {
 
     public void setDate(Date date) {
         this.date = date;
-    }
+	}
+	
+	public String getToday() {
+		return this.today;
+	}
 
 }

@@ -1,10 +1,5 @@
 package com.concurrencysample;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-
-import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
 import software.amazon.codeguruprofilerjavaagent.Profiler;
 
 
@@ -18,8 +13,8 @@ public class ConcurrencyCheckout {
         Profiler systemProfiler = Profiler.builder().profilingGroupName("concurrencysample-profiler").build();
         systemProfiler.start();
          
-        int thrad_count = 5;
-        int make_count =0 ;
+        // int thrad_count = 5;
+        // int make_count =0 ;
         System.out.println("================================");
         System.out.println("Start Concurrency Make Erro Test");
         System.out.println("================================\n");
